@@ -1,0 +1,15 @@
+current directory: /Users/uedatakahiro/projects/chat-space1/vendor/bundle/gems/bootsnap-1.4.4/ext/bootsnap
+/Users/uedatakahiro/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20190716-23197-hiaiwd.rb extconf.rb
+creating Makefile
+
+current directory: /Users/uedatakahiro/projects/chat-space1/vendor/bundle/gems/bootsnap-1.4.4/ext/bootsnap
+make "DESTDIR=" clean
+
+current directory: /Users/uedatakahiro/projects/chat-space1/vendor/bundle/gems/bootsnap-1.4.4/ext/bootsnap
+make "DESTDIR="
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.bundle
+
+current directory: /Users/uedatakahiro/projects/chat-space1/vendor/bundle/gems/bootsnap-1.4.4/ext/bootsnap
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 bootsnap.bundle ./.gem.20190716-23197-1a28vs7/bootsnap
