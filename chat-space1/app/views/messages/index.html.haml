@@ -1,53 +1,29 @@
-.flash-box
-  .wrapper
-    .chat-side
-      .chat-side__side-header
-        .chat-side__side-header__box
-          名前
-          %ul.chat-side__side-header__box__menu
-            %li.chat-side__side-header__box__menu__new-group
-              = link_to "/groups/new" do
-                = fa_icon "pencil-square-o", class: "icon",style: "color:white;"
-                
-            %li.chat-side__side-header__box__menu__edit-user
-              = link_to "blank" do
-                = fa_icon 'cog', class: "icon", style: "color:white;"
-            
-
-      .chat-side__groups
-        .chat-side__groups__group
-          .chat-side__groups__group__name
-            groupname
-            .chat-side__groups__group__name__latest-message
-              message
-    .chat-main
-      .chat-main__main-header
-        .chat-main__main-header__left-box
-          .chat-main__main-header__left-box__current-group
-            グループ名
-          .chat-main__main-header__left-box__member-list
-            グループメンバー
-        .chat-main__main-header__edit-btn
-          EDIT
-          
-          
-      .messages
+.wrapper
+  = render 'shared/side_bar'
         
-        .messages__message
-          
-          .messages__message__upper-info
-            
-            .messages__message__upper-info__talker
-              name名前
-            .messages__message__upper-info__talker-date
-              2019/111/333
-          .messages__message__text
-            textテキスト
-      .form 
-        .form__message
-          %label.form__message__label
-            = fa_icon 'image', class: 'icon fa',style: "color:gray;"
-            %input{class:"form__message__file",type:"file",id:"upload-icon"}
-          
-          %input.form__message__input-box{placeholder: "type a message", type: "text"}
-        %input{class:"form__submit-btn", method: "Send", name: "commit", type:"submit", value:"Send"}  
+  
+  
+  .chat-main
+    .chat-main__main-header
+      .chat-main__main-header__left-box
+        .chat-main__main-header__left-box__current-group
+          = @group.name
+        .chat-main__main-header__left-box__member-list
+          Members :
+          - @group.users.each do |user|
+            = user.name
+      .chat-main__main-header__edit-btn
+        = link_to '/groups/1/edit' do
+          EDIT
+
+    .messages
+      = render @messages
+
+    .form 
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        .form__mask
+          = f.label :image, class: 'form__mask__image' do
+            = fa_icon 'picture-o', class: 'icon'
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit' 
