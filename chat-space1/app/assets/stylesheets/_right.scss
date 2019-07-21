@@ -1,81 +1,85 @@
-.wrapper{
-  .chat-main{
-    width: calc(100vw - 300px);
-    float:left;
-    height:100vh;
+.chat-main{
+  width: calc(100vw - 300px);
+  float:left;
+  height:100vh;
+  
+
+  &__main-header{
+    height: 100px;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 1px #eee;
+
+    &__left-box{
+      margin-top:35px;
     
-
-    &__main-header{
-      height: 100px;
-      padding: 0 40px;
-      display: flex;
-      justify-content: space-between;
-      border-bottom: solid 1px #eee;
-      overflow: scroll;
-
       
-        
-      &__left-box{
-        margin-top:35px;
-      
-        
-        &__current-group{
-          color: #333;
-          font-size: 20px;
-          margin-bottom: 15px;
-        }
-
-        &__member-list{
-          color:pink;
-          font-size:12px;
-          color:#999999;
-          display:flex;  
-            
-          }
-        }
-
-
-
-      &__edit-btn{
-        position: absolute;
-        height: 40px;
-        line-height: 40px;
-        padding: 0 20px;
-        margin-top: 30px;
-        border: solid 1px #38aef0;
-        right: 40px;
-        box-sizing: border-box;
-        color:#38aef0;
-
+      &__current-group{
+        color: #333;
+        font-size: 20px;
+        margin-bottom: 15px;
       }
-    }
-    
-        
-    .message{
+
+      &__member-list{
+        color:pink;
+        font-size:12px;
+        color:#999999;
+        display:flex;  
+          
+        }
+      }
+
+
+
+    &__edit-btn{
+      position: absolute;
+      height: 40px;
+      line-height: 40px;
+      padding: 0 20px;
+      margin-top: 30px;
+      border: solid 1px #38aef0;
+      right: 40px;
       box-sizing: border-box;
-      height: calc(100vh - 190px);
-      padding-top:75px;
-      background-color: #fafafa;
-      overflow: scroll;
-      padding: 46px 40px;
-      
-      
+      color:#38aef0;
+
+    }
+  }
+  
+  .messages{
+    box-sizing: border-box;
+    height: calc(100vh - 190px);
+    padding-top:75px;
+    background-color: #fafafa;
+    overflow: scroll;
+    padding: 46px 40px;
+    
+  }    
+    .message{
+    padding-bottom:40px;
+
       &__upper-message{
-        display: flex;
-        
+      display: flex;
+      margin-bottom: 10px;
+
+      font-size:16px;
+      font-weight:bold;
+      
         &__user-name{
           margin-bottom: 10px;
           margin-left:10px;
           font-size:16px;
           font-weight:bold;
+          color: #434a54;
         
         }
-       
+      
         &__date{
           font-size:12px;
           color: #999999;
           padding-right:10px;
           padding-left:10px;
+          
           
         }
       }
@@ -84,77 +88,73 @@
         color:#434a54;
         font-size:14px;
         margin-left: 10px;
+        margin-bottom:10px;
+        box-sizing: border-box;
       }
     }
             
-          // &__content{
-          // color: #434a54;
-          // font-size: 14px;
-          // margin-bottom: 10px;
-          // margin-left:10px;
-          
+     
   }   
-      
-    .form{
-      height: 110px;
-      padding: 20px 40px;
-      background-color:#ddd;
-      box-sizing: border-box;
-      color:green;
-      // margin:0;
-      display:flex;
     
-    
+  .form{
+    height: 110px;
+    padding: 20px 40px;
+    background-color:#ddd;
+    box-sizing: border-box;
+    color:green;
+    // margin:0;
+    display:flex;
   
-      .new_message{
+  
+
+    .new_message{
+      width:100%;
+      border-style:none;
+      box-sizing: border-box; 
+      display:flex;
+      margin-top:10px;
+      
+      .form__message{
+        height: 50px;
         width:100%;
-        border-style:none;
-        box-sizing: border-box; 
+        padding: 0 40px 0 10px;
+        color: #434a54;
+        border-style: none;
+        background-color:#fff;
         display:flex;
-        margin-top:10px;
+     
+      }
+      
+      .form__mask{
+        font-size: 1.3rem;
+        position: relative;
+        top: 10px;
+        right: 35px;
         
-        .form__message{
-          height: 50px;
-          width:100%;
-          padding: 0 40px 0 10px;
-          color: #434a54;
-          border-style: none;
-          background-color:#fff;
-          display:flex;
-       
-        }
+      
+        .form__mask__image{
+          position:absolute;
         
-        .form__mask{
-          font-size: 1.3rem;
-          position: relative;
-          top: 10px;
-          right: 35px;
-          
-        
-          .form__mask__image{
-            position:absolute;
-          
-            .icon{
-              cursor: pointer;
-            }
-          
-            .hidden{
-            background-color:white;
-            display:none;
+          .icon{
+            cursor: pointer;
           }
-          }
-        }
         
-        .form__submit{
-          width: 100px;
-          height: 50px;
-          padding: 0 30px;
-          margin-left: 15px;
-          background-color: #38aef0;
-          color: white;
-          cursor: pointer;
-          border-style:none;
+          .hidden{
+          background-color:white;
+          display:none;
+        }
         }
       }
+      
+      .form__submit{
+        width: 100px;
+        height: 50px;
+        padding: 0 30px;
+        margin-left: 15px;
+        background-color: #38aef0;
+        color: white;
+        cursor: pointer;
+        border-style:none;
+      }
     }
-}
+  }
