@@ -93,13 +93,6 @@
           }
         }   
       }
-       
-            // &__content{
-            // color: #434a54;
-            // font-size: 14px;
-            // margin-bottom: 10px;
-            // margin-left:10px;
-            
     }   
         
     .form{
@@ -108,11 +101,8 @@
       background-color:#ddd;
       box-sizing: border-box;
       color:green;
-      // margin:0;
       display:flex;
-    
-    
-  
+
       .new_message{
         width:100%;
         border-style:none;
@@ -148,7 +138,7 @@
             .hidden{
             background-color:white;
             display:none;
-          }
+           }
           }
         }
         
@@ -164,4 +154,4 @@
         }
       }
     }
-}
+  }

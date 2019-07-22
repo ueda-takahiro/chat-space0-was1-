@@ -40,7 +40,7 @@ $(document).on('turbolinks:load', function(){
       var html = buildHTML(data);
      
       $(".messages").append(html);
-      $(".form").val(''); //input内のメッセージを消しています。
+   
       $('#new_message')[0].reset();
       $(".form__submit").prop('disabled', false);
       $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
