@@ -54,6 +54,62 @@
     overflow: scroll;
     padding: 46px 40px;
     
+
+    .messages{
+    box-sizing: border-box;
+    height: calc(100vh - 190px);
+    padding-top:75px;
+    background-color: #fafafa;
+    overflow: scroll;
+    padding: 46px 40px;
+   }     
+      .message{
+        
+        padding-bottom: 40px;
+        
+        &__upper-message{
+          display: flex;
+          
+          &__user-name{
+            margin-bottom: 10px;
+            margin-left:10px;
+            color: #434a54;
+            font-size: 16px;
+            font-weight: bold;
+          }
+        
+          &__date{
+            font-size:12px;
+            color: #999999;
+            padding-right:10px;
+            padding-left:10px;
+          }
+         }
+            
+        &__lower-message{
+          color:#434a54;
+         
+          margin-left: 10px;
+          
+          &__content{
+            font-size:14px;
+            color:#434a54;
+            margin-left: 10px;
+          }
+        }   
+      }
+    }   
+        
+    .form{
+      height: 110px;
+      padding: 20px 40px;
+      background-color:#ddd;
+      box-sizing: border-box;
+      color:green;
+      display:flex;
+
+      .new_message{
+
   }    
     .message{
     padding-bottom:40px;
@@ -116,6 +172,7 @@
       
       .form__message{
         height: 50px;
+
         width:100%;
         padding: 0 40px 0 10px;
         color: #434a54;
@@ -135,8 +192,22 @@
         .form__mask__image{
           position:absolute;
         
+
+          .form__mask__image{
+            position:absolute;
+          
+            .icon{
+              cursor: pointer;
+            }
+          
+            .hidden{
+            background-color:white;
+            display:none;
+           }
+
           .icon{
             cursor: pointer;
+
           }
         
           .hidden{
@@ -156,5 +227,6 @@
         cursor: pointer;
         border-style:none;
       }
+     }
     }
-  }
+   }
