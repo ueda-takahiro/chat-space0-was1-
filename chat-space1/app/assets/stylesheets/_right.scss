@@ -189,44 +189,33 @@
         right: 35px;
         
       
+        
+
         .form__mask__image{
           position:absolute;
         
-
-          .form__mask__image{
-            position:absolute;
-          
-            .icon{
-              cursor: pointer;
-            }
-          
-            .hidden{
-            background-color:white;
-            display:none;
-           }
-
           .icon{
             cursor: pointer;
-
           }
         
-          .hidden{
-          background-color:white;
-          display:none;
-        }
-        }
-      }
       
-      .form__submit{
-        width: 100px;
-        height: 50px;
-        padding: 0 30px;
-        margin-left: 15px;
-        background-color: #38aef0;
-        color: white;
-        cursor: pointer;
-        border-style:none;
+        .hidden{
+        background-color:white;
+        display:none;
       }
-     }
+      }
     }
-   }
+    
+    .form__submit{
+      width: 100px;
+      height: 50px;
+      padding: 0 30px;
+      margin-left: 15px;
+      background-color: #38aef0;
+      color: white;
+      cursor: pointer;
+      border-style:none;
+    }
+  }
+  }
+}

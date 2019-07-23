@@ -13,7 +13,7 @@
           - @group.users.each do |user|
             = user.name
       .chat-main__main-header__edit-btn
-        = link_to '/groups/1/edit' do
+        = link_to edit_group_path(@group) do
           EDIT
 
     .messages
